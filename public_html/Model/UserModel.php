@@ -34,7 +34,6 @@ class UserModel extends Database{
 		}
 		return $list;
 	}
-	//public function check
 	public function del($id)
 	{
 		$sql = 'DELETE FROM user WHERE id = $id';

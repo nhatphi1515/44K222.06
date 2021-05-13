@@ -1,6 +1,4 @@
-<?php /**
- * 
- */
+<?php 
 class Permissnews
 {
 	function __construct()

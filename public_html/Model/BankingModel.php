@@ -14,7 +14,7 @@ class BankingModel extends Database{
 		}
 		return $list;
 	}
-	//public function check
+	
 	public function insert($idadmin, $amount, $type)
 	{
 		$sql = "INSERT into banking(amount, idadmin, type) VALUES($amount, $idadmin, '$type')";

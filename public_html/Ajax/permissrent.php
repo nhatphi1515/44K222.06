@@ -1,6 +1,4 @@
-<?php /**
- * 
- */
+<?php 
 class Permissrent
 {
 	function __construct()

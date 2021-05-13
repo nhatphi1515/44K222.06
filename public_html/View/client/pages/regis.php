@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign Up Form by Colorlib</title>
-    <!-- Font Icon -->
     <link rel="stylesheet" href="Public/client/fonts/material-icon/css/material-design-iconic-font.min.css">
-    <!-- Main css -->
     <link rel="stylesheet" href="Public/client/css/style1.css">
     <style type="text/css">
         input{
@@ -18,7 +16,6 @@
 </head>
 <body>
     <div class="main">
-        <!-- Sign up form -->
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
@@ -109,44 +106,26 @@
                 alert("Mật khẩu nhập lại không khớp");
                 return false;
             }
-        }
+       }
         $("#frontID").change(function(){
-            // var fullPath = $("#frontID").get(0).files;
-            // var length = parseInt(fullPath.length);
-            // if (length > 3) {alert("hệ thống chỉ cho phép up tối đa 3 file. hệ thống sẽ ghi nhận 3 file đầu của bạn"); length=3}
-            // var string = '';
-            // for(var i = 0;i<length;i++){
-            //     var buf = event.target.files[i];
-            //     const blob = new Blob( [buf] );
-            //     string += "<img src='"+URL.createObjectURL(blob)+"'>"+"<br><label>"+fullPath.item(i).name+"</label>";
-            // }
-            // $("#frntid").html(string);
-            var fullPath = document.getElementById('frontID').value;
+            var fullPath = $("#frontID").get(0).files;
             if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
-                }
+               var filename = document.getElementById('frontID').files[0].name;
                 $("#ifid").attr("src",URL.createObjectURL(event.target.files[0]));
                 $("#ifid").css("display","block");
                 $("#fid").text(filename);
             }   
         });
         $("#backID").change(function(){
-            var fullPath = document.getElementById('backID').value;
+            var fullPath = $("#backID").get(0).files;
             if (fullPath) {
-                var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
-                var filename = fullPath.substring(startIndex);
-                if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
-                    filename = filename.substring(1);
-                }
+                var filename = document.getElementById('backID').files[0].name;
                 $("#ibid").attr("src",URL.createObjectURL(event.target.files[0]));
                 $("#ibid").css("display","block");
                 $("#bid").text(filename);
             }   
         });
     </script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
     
 </html>

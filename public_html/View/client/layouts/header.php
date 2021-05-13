@@ -79,10 +79,6 @@ $tag = "javascript:ask();";
     <img  style="height: 400px; width: 1100px" class="banner" src="Public/client/img/banner.png">
   </div>
 <?php } ?>
-<script type="text/javascript">
-  function addcart(id) {
-    $.post('Ajax/addcart.php', {id:id});
-    alert('Thêm sản phẩm vào giỏ hàng thành công');
   }
   window.onscroll = function(){
     var x = $(window).scrollTop();
